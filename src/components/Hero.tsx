@@ -176,8 +176,8 @@ export default function Hero() {
                   <button
                     onClick={() => setViewMode("3d")}
                     className={`px-3 py-1 rounded-full text-xs font-mono transition-all cursor-pointer ${viewMode === "3d"
-                        ? "bg-[#14b8a6] text-[#0a0d14] font-semibold shadow-md shadow-[#14b8a6]/20"
-                        : "text-[#94a3b8] hover:text-white"
+                      ? "bg-[#14b8a6] text-[#0a0d14] font-semibold shadow-md shadow-[#14b8a6]/20"
+                      : "text-[#94a3b8] hover:text-white"
                       }`}
                   >
                     3D Model
@@ -185,8 +185,8 @@ export default function Hero() {
                   <button
                     onClick={() => setViewMode("specs")}
                     className={`px-3 py-1 rounded-full text-xs font-mono transition-all cursor-pointer ${viewMode === "specs"
-                        ? "bg-[#14b8a6] text-[#0a0d14] font-semibold shadow-md shadow-[#14b8a6]/20"
-                        : "text-[#94a3b8] hover:text-white"
+                      ? "bg-[#14b8a6] text-[#0a0d14] font-semibold shadow-md shadow-[#14b8a6]/20"
+                      : "text-[#94a3b8] hover:text-white"
                       }`}
                   >
                     Specs
