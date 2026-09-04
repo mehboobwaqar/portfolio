@@ -1,0 +1,240 @@
+{
+  "personal_info": {
+    "name": "Mehboob Waqar",
+    "title": "Flutter Developer",
+    "location": {
+      "city": "Lahore",
+      "country": "Pakistan",
+      "work_preference": "On-site / Remote"
+    },
+    "contact": {
+      "phone": "+92-304-2292019",
+      "email": "mehboobwaqar444@gmail.com"
+    },
+    "social_links": {
+      "linkedin": "https://linkedin.com/in/mehboobwaqar",
+      "github": "https://github.com/mehboobwaqar",
+      "portfolio": "https://mehboobwaqar.vercel.app"
+    }
+  },
+  "summary": "Dynamic and performance-driven Flutter Developer with industry experience in architecting and delivering high-scale, cross-platform mobile applications. Specialized in building robust, production-level solutions with integrations for AI/ML (Google ML Kit, OpenAI), IoT ecosystems (Tuya Smart), and complex third-party services. Adept at full-lifecycle development, from initial architecture (MVVM, Provider, Repository Pattern) to secure global deployment. Committed to engineering clean, maintainable code and premium user experiences that drive market engagement.",
+  "education": [
+    {
+      "institution": "Riphah International University",
+      "location": "Lahore, Pakistan",
+      "degree": "Bachelor of Science in Computer Science",
+      "short_degree": "BSCS",
+      "duration": {
+        "start": "Aug 2021",
+        "end": "June 2025"
+      }
+    }
+  ],
+  "experience": [
+    {
+      "company": "Orax Technologies",
+      "role": "Flutter Developer",
+      "employment_type": "On-site",
+      "location": "Lahore, Pakistan",
+      "period": "July 2025 – Present",
+      "highlights": [
+        {
+          "category": "Mobile Development",
+          "description": "Contributing to the development of production-level Flutter applications, ensuring high performance and responsive UI/UX across Android and iOS platforms."
+        },
+        {
+          "category": "Architecture",
+          "description": "Collaborating with senior developers to implement scalable application structures and efficient state management solutions."
+        },
+        {
+          "category": "Projects",
+          "description": "Worked on 5+ projects within the company, contributing to development, feature implementation, and performance optimization."
+        }
+      ]
+    },
+    {
+      "company": "Headstarter",
+      "role": "Software Engineering Fellow",
+      "employment_type": "Remote",
+      "location": "Remote",
+      "period": "July 2024 – Sept 2024",
+      "highlights": [
+        {
+          "category": "Fellowship",
+          "description": "Engaged in an intensive software engineering program, focusing on real-world engineering practices, collaborative development, and technical problem-solving."
+        }
+      ]
+    }
+  ],
+  "technical_skills": {
+    "languages": [
+      "Dart",
+      "JavaScript",
+      "C++",
+      "SQL",
+      "Java",
+      "HTML",
+      "CSS"
+    ],
+    "mobile_development": [
+      "Flutter",
+      "GetX",
+      "Provider",
+      "MVVM",
+      "REST API",
+      "Hive",
+      "GoRouter"
+    ],
+    "backend_and_cloud": [
+      "Firebase (Auth, Firestore, Cloud Functions, Messaging)",
+      "Node.js",
+      "RESTful APIs"
+    ],
+    "tools_and_platforms": [
+      "Git",
+      "Google Cloud Platform (GCP)",
+      "Android Studio",
+      "VS Code",
+      "Google ML Kit",
+      "OpenAI API",
+      "Stripe SDK"
+    ],
+    "architectural_patterns": [
+      "MVVM (Model-View-ViewModel)",
+      "Repository Pattern",
+      "Modular Architecture",
+      "Dependency Injection (GetIt)",
+      "Type-safe Networking (Dio, Freezed)"
+    ]
+  },
+  "projects": [
+    {
+      "name": "Court Pro",
+      "subtitle": "Global Sports Management Platform",
+      "platforms": ["App Store", "Play Store"],
+      "details": {
+        "architecture": "Designed a modular Flutter application using Provider and GetIt, managing 50+ screens and 150+ API endpoints with a type-safe networking layer (Dio, Freezed).",
+        "integrations": "Integrated Stripe for payments, CometChat for real-time messaging, and Firebase (Auth, Cloud Messaging, Remote Config) for mission-critical services.",
+        "core_features": "Developed synchronized court bookings, automated tournament matchmaking, and location-based search using Google Maps and Geolocator APIs."
+      },
+      "tech_stack": [
+        "Flutter",
+        "Provider",
+        "GetIt",
+        "Dio",
+        "Freezed",
+        "Stripe SDK",
+        "CometChat",
+        "Firebase Auth",
+        "Firebase Cloud Messaging (FCM)",
+        "Firebase Remote Config",
+        "Google Maps API",
+        "Geolocator API"
+      ],
+      "metrics": {
+        "screens_count": "50+",
+        "api_endpoints": "150+"
+      }
+    },
+    {
+      "name": "Trusted Air",
+      "subtitle": "IoT Smart Air Purifier Application",
+      "platforms": ["App Store", "Play Store"],
+      "details": {
+        "iot_integration": "Achieved real-time device control and PM2.5 monitoring by integrating Tuya Smart SDK and architecting native bridges (MethodChannels/EventChannels).",
+        "background_tasks": "Implemented persistent synchronization and home screen widget updates using native background services (BGTaskScheduler for iOS).",
+        "automation": "Engineered smart scenes, sophisticated scheduling systems, and dynamic weather integration via Google Cloud APIs."
+      },
+      "tech_stack": [
+        "Flutter",
+        "Tuya Smart SDK",
+        "MethodChannel",
+        "EventChannel",
+        "Native iOS (BGTaskScheduler)",
+        "Home Screen Widgets",
+        "Google Cloud APIs",
+        "IoT Protocols"
+      ]
+    },
+    {
+      "name": "Calorie Tracker",
+      "subtitle": "AI-Powered Nutrition Assistant",
+      "platforms": ["App Store", "Play Store"],
+      "details": {
+        "ai_ml": "Developed an AI food recognition system using Google ML Kit for real-time image labeling and automated nutritional data extraction.",
+        "data_persistence": "Implemented a high-performance offline layer using Hive NoSQL database for a seamless user experience without internet connectivity.",
+        "monetization": "Integrated Google Mobile Ads, In-App Purchases (IAP), and Firebase suite for performance monitoring and user engagement."
+      },
+      "tech_stack": [
+        "Flutter",
+        "Google ML Kit",
+        "Hive NoSQL",
+        "Google Mobile Ads",
+        "In-App Purchases (IAP)",
+        "Firebase Performance Monitoring",
+        "Firebase Analytics"
+      ]
+    },
+    {
+      "name": "Plant Identifier",
+      "subtitle": "AI-Driven Diagnosis Engine",
+      "platforms": ["App Store", "Play Store"],
+      "details": {
+        "ai_diagnostic": "Leveraged Google ML Kit and OpenAI APIs to provide high-accuracy species data and treatment solutions.",
+        "subscription_model": "Engineered a multi-tier subscription system for Apple and Google Stores, managing trial logic and real-time purchase synchronization.",
+        "cloud_control": "Built a dynamic UI and ad-management system via Firebase Remote Config for real-time app behavior adjustments."
+      },
+      "tech_stack": [
+        "Flutter",
+        "Google ML Kit",
+        "OpenAI API",
+        "StoreKit / In-App Purchase Subscriptions",
+        "Firebase Remote Config",
+        "Cloud Dynamic UI"
+      ]
+    },
+    {
+      "name": "Harvest Hub",
+      "subtitle": "Agriculture Marketplace",
+      "platforms": ["Mobile"],
+      "details": {
+        "functionality": "Enabled real-time machinery booking, listing management for tools/seeds, and a verified labor network with secure in-app chat.",
+        "accessibility": "Designed an intuitive interface for low-literacy users with offline capabilities and live weather updates for optimized farming."
+      },
+      "tech_stack": [
+        "Flutter",
+        "In-app Chat",
+        "Offline-first Sync",
+        "Weather APIs",
+        "Accessible UI/UX Design"
+      ]
+    }
+  ],
+  "awards_and_achievements": [
+    {
+      "title": "Innovate 4.0 Pitching Hackathon",
+      "award": "Winner – Most Innovative Idea",
+      "date": "Dec 2024"
+    },
+    {
+      "title": "Speed Programming Competition – ITCN Asia 2024",
+      "award": "Winner",
+      "date": "2023",
+      "institution": "Riphah International University"
+    }
+  ],
+  "certifications": [
+    {
+      "title": "Web Design for Everybody",
+      "issuer": "Coursera / Specialization"
+    },
+    {
+      "title": "Developing Innovative Ideas",
+      "issuer": "Coursera"
+    },
+    {
+      "title": "Object Oriented Programming in Java",
+      "issuer": "Coursera / Academic Certification"
+    }
+  ]
+}
