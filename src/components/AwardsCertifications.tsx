@@ -22,7 +22,7 @@ export default function AwardsCertifications() {
           </FadeIn>
 
           <FadeIn delay={0.3} direction="up" distance={20}>
-            <p className="mt-3 max-w-2xl text-sm sm:text-base text-[#94a3b8] leading-relaxed">
+            <p className="mt-3 max-w-2xl text-sm sm:text-base text-[#cbd5e1] leading-relaxed">
               Competitive hackathons, algorithmic speed programming victories, and specialized certifications.
             </p>
           </FadeIn>
@@ -32,8 +32,8 @@ export default function AwardsCertifications() {
         <div className="grid gap-5 sm:gap-6 md:grid-cols-2 mb-8 sm:mb-12">
           {awards.map((award, idx) => (
             <FadeIn key={award.title} delay={0.15 + idx * 0.1} direction="up" distance={20}>
-              <div className="group rounded-3xl border border-white/10 bg-[#0e121a]/90 p-6 sm:p-8 backdrop-blur-xl transition-all duration-300 hover:border-[#14b8a6]/40 hover:bg-[#111722]">
-                <div className="inline-flex items-center gap-2 rounded-full border border-[#f59e0b]/30 bg-[#f59e0b]/10 px-3 py-1 font-mono text-xs font-semibold text-[#f59e0b] mb-4">
+              <div className="group rounded-3xl border border-white/10 bg-[#0e121a]/90 p-8 sm:p-10 backdrop-blur-xl transition-all duration-300 hover:border-[#14b8a6]/40 hover:bg-[#111722]">
+                <div className="inline-flex items-center gap-2 rounded-full border border-[#14b8a6]/30 bg-[#14b8a6]/10 px-4 py-1.5 font-mono text-xs font-semibold text-[#14b8a6] mb-4">
                   <span>🏆</span> {award.award}
                 </div>
 
@@ -45,7 +45,7 @@ export default function AwardsCertifications() {
                   {award.institution ? `${award.institution} • ` : ""}{award.date}
                 </div>
 
-                <p className="text-xs sm:text-sm leading-relaxed text-[#94a3b8]">
+                <p className="text-xs sm:text-sm leading-relaxed text-[#cbd5e1]">
                   {award.description}
                 </p>
               </div>
@@ -55,8 +55,8 @@ export default function AwardsCertifications() {
 
         {/* Certifications Grid */}
         <FadeIn delay={0.4} direction="up" distance={20}>
-          <div className="rounded-3xl border border-white/10 bg-[#0e121a]/70 p-6 sm:p-8">
-            <h3 className="font-mono text-xs font-semibold uppercase tracking-wider text-[#64748b] mb-4 sm:mb-6">
+          <div className="rounded-3xl border border-white/10 bg-[#0e121a]/70 p-8 sm:p-10">
+            <h3 className="font-mono text-xs font-semibold uppercase tracking-wider text-[#94a3b8] mb-4 sm:mb-6">
               Verified Coursework &amp; Specializations
             </h3>
 
@@ -64,12 +64,12 @@ export default function AwardsCertifications() {
               {certifications.map((cert) => (
                 <div
                   key={cert.title}
-                  className="rounded-2xl border border-white/5 bg-white/[0.02] p-5 transition-all duration-200 hover:border-[#14b8a6]/30 hover:bg-white/[0.04]"
+                  className="rounded-2xl border border-white/5 bg-white/[0.02] p-6 sm:p-7 transition-all duration-200 hover:border-[#14b8a6]/30 hover:bg-white/[0.04]"
                 >
                   <h4 className="font-display text-sm font-semibold text-white mb-1.5">
                     {cert.title}
                   </h4>
-                  <div className="font-mono text-xs text-[#64748b]">
+                  <div className="font-mono text-xs text-[#94a3b8]">
                     {cert.issuer}
                   </div>
                 </div>

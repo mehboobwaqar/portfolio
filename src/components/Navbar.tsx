@@ -23,11 +23,10 @@ export default function Navbar({ onAIClick }: { onAIClick: () => void }) {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? "bg-[#0a0d14]/85 backdrop-blur-2xl border-b border-white/10 py-3 shadow-xl shadow-black/40"
-          : "bg-transparent py-5"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled
+        ? "bg-[#0a0d14]/85 backdrop-blur-2xl border-b border-white/10 py-3 shadow-xl shadow-black/40"
+        : "bg-transparent py-5"
+        }`}
     >
       <nav className="container mx-auto flex items-center justify-between">
         {/* Monogram Brand Logo matching Fahad's MF. */}
@@ -47,7 +46,7 @@ export default function Navbar({ onAIClick }: { onAIClick: () => void }) {
               <Magnetic strength={0.15}>
                 <a
                   href={link.href}
-                  className="relative px-4 py-2 text-sm text-[#94a3b8] transition-colors duration-300 hover:text-[#14b8a6] group"
+                  className="relative px-4 py-2 text-sm text-[#cbd5e1] transition-colors duration-300 hover:text-[#14b8a6] group"
                 >
                   <span className="relative z-10 font-medium">{link.label}</span>
                   <span className="absolute inset-0 rounded-full bg-[#14b8a6]/0 transition-all duration-300 group-hover:bg-[#14b8a6]/10" />
@@ -59,10 +58,6 @@ export default function Navbar({ onAIClick }: { onAIClick: () => void }) {
 
         {/* Right Actions */}
         <div className="flex items-center gap-3">
-          <div className="hidden sm:inline-flex items-center gap-2 rounded-full border border-[#14b8a6]/20 bg-[#14b8a6]/5 px-3 py-1 text-xs font-medium text-[#14b8a6]">
-            <span className="h-1.5 w-1.5 rounded-full bg-[#14b8a6] animate-pulse" />
-            <span>Available for Hire</span>
-          </div>
 
           <Magnetic strength={0.25}>
             <button
@@ -120,12 +115,8 @@ export default function Navbar({ onAIClick }: { onAIClick: () => void }) {
               <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" />
               </svg>
-              <span>Ask AI Assistant</span>
+              <span>Ask AI</span>
             </button>
-            <div className="flex items-center justify-center gap-2 text-xs font-medium text-[#14b8a6]">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#14b8a6] animate-pulse" />
-              <span>Available for Hire &amp; Mobile Contracts</span>
-            </div>
           </div>
         </div>
       )}

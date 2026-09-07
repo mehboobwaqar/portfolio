@@ -1,16 +1,15 @@
 "use client";
 
 import { useRef, useState } from "react";
+import Image from "next/image";
 import { personalInfo } from "@/data/cvData";
 import FadeIn from "./motion/FadeIn";
 import SplitTextReveal from "./motion/SplitTextReveal";
 import Magnetic from "./motion/Magnetic";
-import Hero3DCanvas from "./3d/Hero3DCanvas";
 
 export default function Hero() {
   const cardRef = useRef<HTMLDivElement>(null);
   const [tilt, setTilt] = useState({ x: 0, y: 0 });
-  const [viewMode, setViewMode] = useState<"3d" | "specs">("3d");
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!cardRef.current) return;
@@ -26,7 +25,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative min-h-[85vh] flex flex-col justify-center pt-24 sm:pt-36 pb-14 sm:pb-20" id="hero">
+    <section className="relative min-h-[85vh] flex flex-col justify-center pt-28 sm:pt-40 pb-14 sm:pb-20" id="hero">
       <div className="container relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-14 items-center">
 
@@ -70,7 +69,7 @@ export default function Hero() {
 
             {/* Narrative */}
             <FadeIn delay={1.2} direction="up" distance={15}>
-              <p className="mt-4 sm:mt-5 max-w-xl text-sm sm:text-base leading-relaxed text-[#94a3b8]">
+              <p className="mt-4 sm:mt-5 max-w-xl text-sm sm:text-base leading-relaxed text-[#cbd5e1]">
                 Turning complex architectural challenges into polished, 60fps production mobile applications. Specializing in high-scale Flutter apps with on-device AI/ML vision, IoT hardware telemetry, and enterprise MVVM systems.
               </p>
             </FadeIn>
@@ -81,7 +80,7 @@ export default function Hero() {
                 <Magnetic strength={0.3}>
                   <a
                     href="#projects"
-                    className="group inline-flex items-center gap-2 rounded-full bg-[#14b8a6] px-6 sm:px-7 py-3 sm:py-3.5 text-xs sm:text-sm font-semibold text-[#0a0d14] transition-all duration-300 hover:shadow-xl hover:shadow-[#14b8a6]/30 hover:scale-[1.02]"
+                    className="group inline-flex items-center gap-2 rounded-full bg-[#14b8a6] px-7 sm:px-8 py-3.5 sm:py-4 text-xs sm:text-sm font-semibold text-[#0a0d14] transition-all duration-300 hover:shadow-xl hover:shadow-[#14b8a6]/30 hover:scale-[1.02]"
                   >
                     <span>View Projects</span>
                     <svg
@@ -99,7 +98,7 @@ export default function Hero() {
                 <Magnetic strength={0.25}>
                   <a
                     href="#contact"
-                    className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.04] px-6 sm:px-7 py-3 sm:py-3.5 text-xs sm:text-sm font-medium text-white backdrop-blur-sm transition-all duration-300 hover:border-[#14b8a6]/40 hover:bg-white/[0.08]"
+                    className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.04] px-7 sm:px-8 py-3.5 sm:py-4 text-xs sm:text-sm font-medium text-white backdrop-blur-sm transition-all duration-300 hover:border-[#14b8a6]/40 hover:bg-white/[0.08]"
                   >
                     <span>Contact Me</span>
                   </a>
@@ -154,146 +153,44 @@ export default function Hero() {
             </FadeIn>
           </div>
 
-          {/* Right Column — 3D Tilt Blueprint / Production Device Showcase */}
+          {/* Right Column — Mehboob Waqar Portrait Showcase */}
           <FadeIn delay={0.8} direction="right" distance={30}>
-            <div
-              ref={cardRef}
-              onMouseMove={handleMouseMove}
-              onMouseLeave={handleMouseLeave}
-              style={{
-                transform: `perspective(1000px) rotateX(${tilt.y}deg) rotateY(${tilt.x}deg)`,
-                transition: "transform 0.2s cubic-bezier(0.16, 1, 0.3, 1)",
-              }}
-              className="relative w-full max-w-lg mx-auto lg:max-w-none rounded-3xl border border-white/15 bg-[#0f121a]/95 p-5 sm:p-6 lg:p-7 shadow-2xl shadow-black/80 backdrop-blur-xl"
-            >
-              {/* Dynamic Island Header with View Mode Switcher */}
-              <div className="flex items-center justify-between pb-4 border-b border-white/10 text-xs font-mono text-[#64748b]">
-                <div className="flex items-center gap-2">
-                  <span className="h-2 w-2 rounded-full bg-[#14b8a6] animate-pulse" />
-                  <span className="text-white/80 font-medium">Interactive Showcase</span>
-                </div>
-                <div className="flex items-center gap-1 bg-black/60 border border-white/10 rounded-full p-1">
-                  <button
-                    onClick={() => setViewMode("3d")}
-                    className={`px-3 py-1 rounded-full text-xs font-mono transition-all cursor-pointer ${viewMode === "3d"
-                      ? "bg-[#14b8a6] text-[#0a0d14] font-semibold shadow-md shadow-[#14b8a6]/20"
-                      : "text-[#94a3b8] hover:text-white"
-                      }`}
-                  >
-                    3D Model
-                  </button>
-                  <button
-                    onClick={() => setViewMode("specs")}
-                    className={`px-3 py-1 rounded-full text-xs font-mono transition-all cursor-pointer ${viewMode === "specs"
-                      ? "bg-[#14b8a6] text-[#0a0d14] font-semibold shadow-md shadow-[#14b8a6]/20"
-                      : "text-[#94a3b8] hover:text-white"
-                      }`}
-                  >
-                    Specs
-                  </button>
+            <div className="relative w-full max-w-md mx-auto lg:max-w-none">
+              {/* Ambient Glowing Aura behind photo */}
+              <div className="absolute -inset-4 rounded-3xl bg-gradient-to-tr from-[#14b8a6]/20 via-[#06b6d4]/15 to-transparent blur-3xl -z-10 pointer-events-none opacity-80" />
+
+              {/* 3D Tilt Frame */}
+              <div
+                ref={cardRef}
+                onMouseMove={handleMouseMove}
+                onMouseLeave={handleMouseLeave}
+                style={{
+                  transform: `perspective(1000px) rotateX(${tilt.y}deg) rotateY(${tilt.x}deg)`,
+                  transition: "transform 0.2s cubic-bezier(0.16, 1, 0.3, 1)",
+                }}
+                className="group relative rounded-3xl border-2 sm:border-[3px] border-[#14b8a6] shadow-2xl shadow-[#14b8a6]/25 backdrop-blur-xl overflow-hidden"
+              >
+                {/* Photo Container — Pure Clean Portrait */}
+                <div className="relative w-full aspect-[3.7/4.7] overflow-hidden bg-[#090a0f]">
+                  <Image
+                    src="/mehboob-waqar.png"
+                    alt="Mehboob Waqar - Senior Flutter & Mobile Engineer"
+                    fill
+                    priority
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 480px"
+                    className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                  />
                 </div>
               </div>
-
-              {/* View 1: Real Interactive 3D Holographic Device */}
-              {viewMode === "3d" && (
-                <div className="mt-3 flex flex-col items-center">
-                  <div className="w-full flex items-center justify-between px-1 mb-2 text-xs">
-                    <span className="inline-flex items-center gap-1.5 font-semibold text-[#14b8a6] uppercase tracking-wide">
-                      WebGL 3D Hologram
-                    </span>
-                    <span className="font-mono text-[#64748b]">
-                      Drag to rotate
-                    </span>
-                  </div>
-
-                  {/* 3D Canvas Mount */}
-                  <Hero3DCanvas />
-
-                  {/* Interactive Status Footer */}
-                  <div className="w-full mt-3 rounded-2xl border border-white/10 bg-white/[0.03] p-3 flex flex-wrap items-center justify-between gap-2 text-xs text-[#94a3b8] font-mono">
-                    <span className="text-[#14b8a6] font-semibold">● Flutter Core</span>
-                    <span>50+ Screens</span>
-                    <span>IoT Telemetry</span>
-                  </div>
-                </div>
-              )}
-
-              {/* View 2: Detailed Production Specs */}
-              {viewMode === "specs" && (
-                <div className="mt-4 space-y-3">
-                  {/* Card 1: Court Pro */}
-                  <div className="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-4 sm:p-5 transition-colors hover:border-[#14b8a6]/30">
-                    <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
-                      <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#14b8a6] uppercase tracking-wide">
-                        <span className="h-1.5 w-1.5 rounded-full bg-[#14b8a6]" />
-                        Flagship Mobile System
-                      </span>
-                      <span className="text-[10px] font-mono px-2 py-0.5 rounded-full border border-white/10 bg-white/[0.03] text-white/60">
-                        App Store • Play Store
-                      </span>
-                    </div>
-
-                    <h3 className="font-display text-lg sm:text-xl font-bold text-white">Court Pro</h3>
-                    <p className="mt-1 text-xs sm:text-sm text-[#94a3b8] leading-relaxed">
-                      Sports management platform managing 50+ modular screens &amp; 150+ REST endpoints with type-safe Dio + Freezed architecture.
-                    </p>
-
-                    <div className="mt-3 flex flex-wrap gap-1.5">
-                      <span className="px-2.5 py-1 rounded-md border border-white/[0.08] bg-white/[0.02] font-mono text-[11px] text-[#94a3b8]">
-                        50+ Screens
-                      </span>
-                      <span className="px-2.5 py-1 rounded-md border border-white/[0.08] bg-white/[0.02] font-mono text-[11px] text-[#94a3b8]">
-                        150+ APIs
-                      </span>
-                      <span className="px-2.5 py-1 rounded-md border border-white/[0.08] bg-white/[0.02] font-mono text-[11px] text-[#94a3b8]">
-                        Stripe Payments
-                      </span>
-                      <span className="px-2.5 py-1 rounded-md border border-white/[0.08] bg-white/[0.02] font-mono text-[11px] text-[#94a3b8]">
-                        CometChat
-                      </span>
-                    </div>
-                  </div>
-
-                  {/* Card 2: Trusted Air (IoT) */}
-                  <div className="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-4 sm:p-5 transition-colors hover:border-[#10b981]/30">
-                    <div className="flex flex-wrap items-center justify-between gap-2 mb-1.5">
-                      <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#10b981] uppercase tracking-wide">
-                        <span className="h-1.5 w-1.5 rounded-full bg-[#10b981]" />
-                        IoT Hardware Telemetry
-                      </span>
-                      <span className="text-[10px] font-mono px-2 py-0.5 rounded-full border border-white/10 bg-white/[0.03] text-white/60">
-                        Tuya Smart SDK
-                      </span>
-                    </div>
-
-                    <h3 className="font-display text-base sm:text-lg font-bold text-white">Trusted Air</h3>
-                    <p className="mt-1 text-xs sm:text-sm text-[#94a3b8] leading-relaxed">
-                      Bidirectional MethodChannel &amp; EventChannel bridge for live PM2.5 sensor streaming &amp; iOS BGTaskScheduler background sync.
-                    </p>
-
-                    <div className="mt-3 flex flex-wrap gap-1.5">
-                      <span className="px-2.5 py-1 rounded-md border border-white/[0.08] bg-white/[0.02] font-mono text-[11px] text-[#94a3b8]">
-                        MethodChannel
-                      </span>
-                      <span className="px-2.5 py-1 rounded-md border border-white/[0.08] bg-white/[0.02] font-mono text-[11px] text-[#94a3b8]">
-                        EventChannel
-                      </span>
-                      <span className="px-2.5 py-1 rounded-md border border-white/[0.08] bg-white/[0.02] font-mono text-[11px] text-[#94a3b8]">
-                        BGTaskScheduler
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              )}
             </div>
           </FadeIn>
         </div>
       </div>
 
       {/* Bottom Scroll Indicator matching thefahad.app */}
-      <FadeIn delay={1.8} className="mx-auto mt-10 sm:mt-14">
+      <FadeIn delay={1.8} className="mx-auto mt-14 sm:mt-20">
         <div className="flex flex-col items-center gap-2 text-center">
-          <span className="text-[10px] tracking-[0.3em] text-[#64748b] uppercase font-mono">
+          <span className="text-[10px] tracking-[0.3em] text-[#94a3b8] uppercase font-mono">
             Scroll to explore
           </span>
           <div className="h-8 sm:h-10 w-[1px] bg-gradient-to-b from-[#14b8a6]/60 to-transparent relative overflow-hidden">

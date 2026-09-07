@@ -9,7 +9,7 @@ export default function ContactSection() {
     <section className="section py-20 sm:py-28 relative z-10" id="contact">
       <div className="container">
         <FadeIn delay={0.15} direction="up" distance={25}>
-          <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-[#0e121a]/95 p-6 sm:p-12 md:p-16 text-center backdrop-blur-2xl shadow-2xl">
+          <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-[#0e121a]/95 p-8 sm:p-14 md:p-20 text-center backdrop-blur-2xl shadow-2xl">
             {/* Ambient Background Glow */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 h-72 w-72 rounded-full bg-[#14b8a6]/10 blur-3xl pointer-events-none" />
 
@@ -21,7 +21,7 @@ export default function ContactSection() {
               Let&apos;s build something exceptional together.
             </h2>
 
-            <p className="mt-4 text-sm sm:text-base text-[#94a3b8] max-w-xl mx-auto leading-relaxed">
+            <p className="mt-4 text-sm sm:text-base text-[#cbd5e1] max-w-xl mx-auto leading-relaxed">
               Whether you are looking to hire a senior Flutter developer, explore a contract for a new mobile product, or need IoT/AI integration expertise — I&apos;m always available for a conversation.
             </p>
 
@@ -53,7 +53,7 @@ export default function ContactSection() {
             </div>
 
             {/* Meta Row */}
-            <div className="mt-12 pt-8 border-t border-white/5 flex flex-wrap items-center justify-center gap-8 text-xs font-mono text-[#64748b]">
+            <div className="mt-12 pt-8 border-t border-white/5 flex flex-wrap items-center justify-center gap-8 text-xs font-mono text-[#94a3b8]">
               <span className="flex items-center gap-2">
                 <span className="h-1.5 w-1.5 rounded-full bg-[#10b981]" />
                 {personalInfo.workPreference}

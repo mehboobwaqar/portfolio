@@ -13,8 +13,7 @@
     },
     "social_links": {
       "linkedin": "https://linkedin.com/in/mehboobwaqar",
-      "github": "https://github.com/mehboobwaqar",
-      "portfolio": "https://mehboobwaqar.vercel.app"
+      "github": "https://github.com/mehboobwaqar"
     }
   },
   "summary": "Dynamic and performance-driven Flutter Developer with industry experience in architecting and delivering high-scale, cross-platform mobile applications. Specialized in building robust, production-level solutions with integrations for AI/ML (Google ML Kit, OpenAI), IoT ecosystems (Tuya Smart), and complex third-party services. Adept at full-lifecycle development, from initial architecture (MVVM, Provider, Repository Pattern) to secure global deployment. Committed to engineering clean, maintainable code and premium user experiences that drive market engagement.",
@@ -134,7 +133,9 @@
       "metrics": {
         "screens_count": "50+",
         "api_endpoints": "150+"
-      }
+      },
+      "app_store_url": "https://apps.apple.com/pk/app/courtpro/id6747027287",
+      "play_store_url": "https://play.google.com/store/apps/details?id=com.courtpro.app"
     },
     {
       "name": "Trusted Air",
@@ -154,7 +155,9 @@
         "Home Screen Widgets",
         "Google Cloud APIs",
         "IoT Protocols"
-      ]
+      ],
+      "app_store_url": "https://apps.apple.com/pk/app/trustedair/id6745402737",
+      "play_store_url": "https://play.google.com/store/apps/details?id=com.trusted.air"
     },
     {
       "name": "Calorie Tracker",
@@ -173,7 +176,9 @@
         "In-App Purchases (IAP)",
         "Firebase Performance Monitoring",
         "Firebase Analytics"
-      ]
+      ],
+      "app_store_url": "https://apps.apple.com/pk/app/calorie-counter-app-caloryx/id6756643160",
+      "play_store_url": "https://play.google.com/store/apps/details?id=com.gpa.calorietracker.android"
     },
     {
       "name": "Plant Identifier",
@@ -191,7 +196,9 @@
         "StoreKit / In-App Purchase Subscriptions",
         "Firebase Remote Config",
         "Cloud Dynamic UI"
-      ]
+      ],
+      "app_store_url": "https://apps.apple.com/pk/app/plant-identifier-protectgreen/id6740023283",
+      "play_store_url": "https://play.google.com/store/apps/details?id=com.gps.plantidentifier.diseasesdiagnosis"
     },
     {
       "name": "Harvest Hub",

@@ -15,7 +15,7 @@
 | **Email Address** | [mehboobwaqar444@gmail.com](mailto:mehboobwaqar444@gmail.com) |
 | **LinkedIn** | [linkedin.com/in/mehboobwaqar](https://linkedin.com/in/mehboobwaqar) |
 | **GitHub** | [github.com/mehboobwaqar](https://github.com/mehboobwaqar) |
-| **Portfolio Website** | [mehboobwaqar.vercel.app](https://mehboobwaqar.vercel.app) |
+| **Portfolio Website** | Current Web Application (v2) |
 
 ---
 
@@ -105,35 +105,35 @@
 ## 6. Featured Production & Showcase Projects
 
 ### 1. **Court Pro** — *Global Sports Management Platform*
-- **Availability**: App Store | Play Store
+- **Availability**: [Apple App Store](https://apps.apple.com/pk/app/courtpro/id6747027287) | [Google Play Store](https://play.google.com/store/apps/details?id=com.courtpro.app)
 - **Key Achievements**:
   - **Architecture**: Designed a modular Flutter application using **Provider** and **GetIt**, managing **50+ screens** and **150+ API endpoints** with a type-safe networking layer (**Dio, Freezed**).
   - **Integrations**: Integrated **Stripe** for payments, **CometChat** for real-time messaging, and **Firebase** (Auth, Cloud Messaging, Remote Config) for mission-critical services.
   - **Core Features**: Developed synchronized court bookings, automated tournament matchmaking, and location-based search using **Google Maps** and **Geolocator APIs**.
 
 ### 2. **Trusted Air** — *IoT Smart Air Purifier Application*
-- **Availability**: App Store | Play Store
+- **Availability**: [Apple App Store](https://apps.apple.com/pk/app/trustedair/id6745402737) | [Google Play Store](https://play.google.com/store/apps/details?id=com.trusted.air)
 - **Key Achievements**:
   - **IoT Integration**: Achieved real-time device control and PM2.5 air quality monitoring by integrating the **Tuya Smart SDK** and architecting native bridges (**MethodChannels/EventChannels**).
   - **Background Tasks**: Implemented persistent synchronization and home screen widget updates using native background services (**BGTaskScheduler for iOS**).
   - **Automation**: Engineered smart scenes, sophisticated scheduling systems, and dynamic weather integration via **Google Cloud APIs**.
 
 ### 3. **Calorie Tracker** — *AI-Powered Nutrition Assistant*
-- **Availability**: App Store | Play Store
+- **Availability**: [Apple App Store](https://apps.apple.com/pk/app/calorie-counter-app-caloryx/id6756643160) | [Google Play Store](https://play.google.com/store/apps/details?id=com.gpa.calorietracker.android)
 - **Key Achievements**:
   - **AI/ML**: Developed an AI food recognition system using **Google ML Kit** for real-time image labeling and automated nutritional data extraction.
   - **Data Persistence**: Implemented a high-performance offline layer using **Hive NoSQL database** for a seamless user experience without internet connectivity.
   - **Monetization**: Integrated **Google Mobile Ads**, **In-App Purchases (IAP)**, and the **Firebase suite** for performance monitoring and user engagement.
 
 ### 4. **Plant Identifier** — *AI-Driven Diagnosis Engine*
-- **Availability**: App Store | Play Store
+- **Availability**: [Apple App Store](https://apps.apple.com/pk/app/plant-identifier-protectgreen/id6740023283) | [Google Play Store](https://play.google.com/store/apps/details?id=com.gps.plantidentifier.diseasesdiagnosis)
 - **Key Achievements**:
   - **AI Diagnostic**: Leveraged **Google ML Kit** and **OpenAI APIs** to provide high-accuracy species data and botanical treatment solutions.
   - **Subscription Model**: Engineered a multi-tier subscription system for Apple App Store and Google Play Store, managing trial logic and real-time purchase synchronization.
   - **Cloud Control**: Built a dynamic UI and ad-management system via **Firebase Remote Config** for real-time app behavior adjustments without resubmitting app builds.
 
 ### 5. **Harvest Hub** — *Agriculture Marketplace*
-- **Availability**: Mobile App
+- **Availability**: Mobile App (Internal Client Production)
 - **Key Achievements**:
   - **Functionality**: Enabled real-time machinery booking, listing management for tools/seeds, and a verified labor network with secure in-app chat.
   - **Accessibility**: Designed an intuitive interface tailored for low-literacy users with offline capabilities and live weather updates for optimized farming operations.

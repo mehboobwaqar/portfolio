@@ -112,7 +112,10 @@ Here is what I can tell you about:
       "sports application k baray me btao"
     ],
     response: `🏟️ **Court Pro — Global Sports Management Platform**
-*Published on Apple App Store & Google Play Store*
+*Live on Apple App Store & Google Play Store*
+
+• 🍏 **App Store**: [Download on App Store](https://apps.apple.com/pk/app/courtpro/id6747027287)
+• 🤖 **Google Play**: [Get it on Google Play](https://play.google.com/store/apps/details?id=com.courtpro.app)
 
 • **Scale & Architecture**: Modular Flutter application managing **50+ custom screens** and **150+ REST API endpoints** using **Provider** and **GetIt** dependency injection.
 • **Type-Safe Networking**: High-performance HTTP client layer with **Dio** and immutable model code-generation via **Freezed**.
@@ -144,7 +147,10 @@ Here is what I can tell you about:
       "air purifier wali app"
     ],
     response: `🌿 **Trusted Air — IoT Smart Air Purifier Application**
-*Published on Apple App Store & Google Play Store*
+*Live on Apple App Store & Google Play Store*
+
+• 🍏 **App Store**: [Download on App Store](https://apps.apple.com/pk/app/trustedair/id6745402737)
+• 🤖 **Google Play**: [Get it on Google Play](https://play.google.com/store/apps/details?id=com.trusted.air)
 
 • **IoT Device Communication**: Integrated **Tuya Smart SDK** to deliver real-time remote control of air purifiers and live **PM2.5** particulate matter monitoring.
 • **Native Platform Bridges**: Architected custom **MethodChannels** and **EventChannels** (Swift/Kotlin) for bidirectional communication between Flutter and native hardware SDKs.
@@ -172,8 +178,11 @@ Here is what I can tell you about:
       "food recognition app k baray me btao",
       "khana peena track karne wali app"
     ],
-    response: `🍎 **Calorie Tracker — AI-Powered Nutrition Assistant**
-*Published on Apple App Store & Google Play Store*
+    response: `🍎 **Calorie Tracker (Caloryx) — AI-Powered Nutrition Assistant**
+*Live on Apple App Store & Google Play Store*
+
+• 🍏 **App Store**: [Download on App Store](https://apps.apple.com/pk/app/calorie-counter-app-caloryx/id6756643160)
+• 🤖 **Google Play**: [Get it on Google Play](https://play.google.com/store/apps/details?id=com.gpa.calorietracker.android)
 
 • **On-Device Computer Vision**: Integrated **Google ML Kit** for real-time camera food identification and automated nutritional breakdown extraction.
 • **High-Performance Storage**: Engineered an offline-first data layer with **Hive NoSQL database** for sub-millisecond local queries.
@@ -199,8 +208,11 @@ Here is what I can tell you about:
       "podon wali app konsi hai",
       "plant disease wali app"
     ],
-    response: `🌱 **Plant Identifier — AI-Driven Diagnosis Engine**
-*Published on Apple App Store & Google Play Store*
+    response: `🌱 **Plant Identifier (ProtectGreen) — AI-Driven Diagnosis Engine**
+*Live on Apple App Store & Google Play Store*
+
+• 🍏 **App Store**: [Download on App Store](https://apps.apple.com/pk/app/plant-identifier-protectgreen/id6740023283)
+• 🤖 **Google Play**: [Get it on Google Play](https://play.google.com/store/apps/details?id=com.gps.plantidentifier.diseasesdiagnosis)
 
 • **Dual AI Pipeline**: Combined **Google ML Kit** for fast on-device plant visual classification with **OpenAI API** for deep botanical disease diagnosis and tailored treatment regimens.
 • **In-App Subscriptions**: Designed multi-tier subscription architecture across Apple App Store and Google Play Billing with free-trial tracking and real-time receipt validation.
@@ -267,6 +279,59 @@ Here is what I can tell you about:
 5. 🌾 **Harvest Hub** — Agriculture Marketplace & Offline Farm Services
 
 All 5 are available on or designed for the App Store & Google Play Store. Which one would you like more details on?`
+  },
+
+  // ─────────────────────────────────────────────────────────────
+  // 8B. APP STORE & GOOGLE PLAY DIRECT DOWNLOAD LINKS
+  // ─────────────────────────────────────────────────────────────
+  {
+    id: "app_links",
+    category: "projects",
+    phrases: [
+      "app links",
+      "apps link",
+      "store links",
+      "app store links",
+      "play store links",
+      "download links",
+      "apps k link",
+      "apps ke links",
+      "give me app links",
+      "where can i download the apps",
+      "live apps",
+      "published apps"
+    ],
+    keywords: ["links", "link", "download", "store", "stores", "url", "urls"],
+    urduPhrases: [
+      "apps k link",
+      "apps ke link ku nhi lagy",
+      "apps k link do",
+      "app store k link",
+      "play store k link",
+      "download link kahan hain"
+    ],
+    response: `Here are the official **App Store & Google Play Store** links for Mehboob Waqar's published applications:
+
+1. 🏟️ **Court Pro — Sports Management Platform**
+• 🍏 **App Store**: [Court Pro on App Store](https://apps.apple.com/pk/app/courtpro/id6747027287)
+• 🤖 **Google Play**: [Court Pro on Google Play](https://play.google.com/store/apps/details?id=com.courtpro.app)
+
+2. 🌿 **Trusted Air — IoT Air Purifier & PM2.5 Telemetry**
+• 🍏 **App Store**: [Trusted Air on App Store](https://apps.apple.com/pk/app/trustedair/id6745402737)
+• 🤖 **Google Play**: [Trusted Air on Google Play](https://play.google.com/store/apps/details?id=com.trusted.air)
+
+3. 🍎 **Calorie Tracker (Caloryx) — AI Nutrition Assistant**
+• 🍏 **App Store**: [Caloryx on App Store](https://apps.apple.com/pk/app/calorie-counter-app-caloryx/id6756643160)
+• 🤖 **Google Play**: [Caloryx on Google Play](https://play.google.com/store/apps/details?id=com.gpa.calorietracker.android)
+
+4. 🌱 **Plant Identifier (ProtectGreen) — AI Botanical Diagnosis**
+• 🍏 **App Store**: [ProtectGreen on App Store](https://apps.apple.com/pk/app/plant-identifier-protectgreen/id6740023283)
+• 🤖 **Google Play**: [ProtectGreen on Google Play](https://play.google.com/store/apps/details?id=com.gps.plantidentifier.diseasesdiagnosis)
+
+5. 🌾 **Harvest Hub**
+• *Enterprise AgriTech Client Project (Private Client Distribution)*
+
+✨ *Tip: You can also tap the dedicated **App Store** and **Google Play** buttons on each project card on the homepage!*`
   },
 
   // ─────────────────────────────────────────────────────────────
@@ -636,7 +701,7 @@ Through the **Trusted Air** production project, Mehboob mastered:
 • 📱 **Phone / WhatsApp**: [+92-304-2292019](tel:+923042292019)
 • 💼 **LinkedIn**: [linkedin.com/in/mehboobwaqar](https://linkedin.com/in/mehboobwaqar)
 • 🐙 **GitHub**: [github.com/mehboobwaqar](https://github.com/mehboobwaqar)
-• 🌐 **Portfolio**: [mehboobwaqar.vercel.app](https://mehboobwaqar.vercel.app)
+• 🌐 **Portfolio**: *You are currently browsing Mehboob's official new portfolio right here!*
 
 He is responsive via Email and WhatsApp for new opportunities, freelance contracts, or technical consultations!`
   },

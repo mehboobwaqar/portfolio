@@ -11,6 +11,8 @@ export interface Project {
   highlights: string[];
   techStack: string[];
   metrics: { label: string; value: string }[];
+  appStoreUrl?: string;
+  playStoreUrl?: string;
 }
 
 export interface Experience {
@@ -51,7 +53,6 @@ export const personalInfo = {
   email: "mehboobwaqar444@gmail.com",
   linkedin: "https://linkedin.com/in/mehboobwaqar",
   github: "https://github.com/mehboobwaqar",
-  portfolio: "https://mehboobwaqar.vercel.app",
 };
 
 export const summary =
@@ -117,6 +118,8 @@ export const projects: Project[] = [
       { label: "API Endpoints", value: "150+" },
       { label: "Architecture", value: "Modular MVVM" }
     ],
+    appStoreUrl: "https://apps.apple.com/pk/app/courtpro/id6747027287",
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.courtpro.app",
   },
   {
     name: "Trusted Air",
@@ -136,6 +139,8 @@ export const projects: Project[] = [
       { label: "Background Sync", value: "BGTaskScheduler" },
       { label: "Native Bridges", value: "Swift / Kotlin" }
     ],
+    appStoreUrl: "https://apps.apple.com/pk/app/trustedair/id6745402737",
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.trusted.air",
   },
   {
     name: "Calorie Tracker",
@@ -154,6 +159,8 @@ export const projects: Project[] = [
       { label: "Storage", value: "Hive NoSQL" },
       { label: "Availability", value: "Offline-First" }
     ],
+    appStoreUrl: "https://apps.apple.com/pk/app/calorie-counter-app-caloryx/id6756643160",
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.gpa.calorietracker.android",
   },
   {
     name: "Plant Identifier",
@@ -172,6 +179,8 @@ export const projects: Project[] = [
       { label: "Monetization", value: "Subscriptions" },
       { label: "Feature Control", value: "Remote Config" }
     ],
+    appStoreUrl: "https://apps.apple.com/pk/app/plant-identifier-protectgreen/id6740023283",
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.gps.plantidentifier.diseasesdiagnosis",
   },
   {
     name: "Harvest Hub",

@@ -5,7 +5,7 @@ import { personalInfo } from "@/data/cvData";
 export default function Footer() {
   return (
     <footer className="border-t border-white/10 bg-[#0a0d14]/90 py-8 sm:py-10 relative z-10">
-      <div className="container flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-6 text-xs text-[#94a3b8]">
+      <div className="container flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-6 text-xs text-[#cbd5e1]">
         <div className="text-center sm:text-left">
           <span className="font-semibold text-white">{personalInfo.name}</span>
           <span className="text-white/30 mx-2">•</span>
