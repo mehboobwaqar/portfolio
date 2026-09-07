@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import FadeIn from "./motion/FadeIn";
 import SplitTextReveal from "./motion/SplitTextReveal";
@@ -15,6 +16,10 @@ export default function WelcomeExperience({
   onSelectPortfolio,
   onSelectChat,
 }: WelcomeExperienceProps) {
+  const [activeCard, setActiveCard] = useState<"portfolio" | "ai" | null>(null);
+  const isPortfolioActive = activeCard === "portfolio";
+  const isAIActive = activeCard === "ai";
+
   return (
     <AnimatePresence>
       {isOpen && (
@@ -22,9 +27,9 @@ export default function WelcomeExperience({
           initial={{ opacity: 1 }}
           exit={{ opacity: 0, scale: 0.98 }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="fixed inset-0 z-[9999] flex items-center justify-center overflow-hidden bg-[#0a0d14]/95 backdrop-blur-3xl"
+          className="fixed inset-0 z-[50] flex items-center justify-center overflow-hidden bg-transparent"
         >
-          {/* Ambient Lighting Orbs (matching thefahad.app) */}
+          {/* Ambient Lighting Orbs */}
           <div className="absolute inset-0 z-0 pointer-events-none">
             <div className="absolute top-[-10%] left-[-10%] h-[45%] w-[45%] rounded-full bg-[#14b8a6]/10 blur-[130px]" />
             <div className="absolute bottom-[-10%] right-[-10%] h-[45%] w-[45%] rounded-full bg-[#14b8a6]/10 blur-[130px]" />
@@ -33,19 +38,71 @@ export default function WelcomeExperience({
           <div className="relative z-10 w-full max-w-3xl px-4 sm:px-6 py-8 text-center max-h-[94vh] overflow-y-auto">
             {/* Greeting Pill */}
             <FadeIn delay={0.15} direction="down" distance={20}>
-              <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#14b8a6]/25 bg-[#14b8a6]/8 px-3.5 py-1 text-xs sm:text-sm font-medium text-[#14b8a6] backdrop-blur-md">
-                <span className="relative flex h-2 w-2">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#14b8a6] opacity-75" />
-                  <span className="relative inline-flex h-2 w-2 rounded-full bg-[#14b8a6]" />
+              <div
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "10px",
+                  padding: "9px 24px",
+                  borderRadius: "9999px",
+                  border: "1px solid rgba(20, 184, 166, 0.35)",
+                  backgroundColor: "rgba(20, 184, 166, 0.12)",
+                  backdropFilter: "blur(12px)",
+                  marginBottom: "24px",
+                  boxShadow: "0 0 20px rgba(20, 184, 166, 0.12)",
+                }}
+              >
+                <span
+                  style={{
+                    position: "relative",
+                    display: "flex",
+                    height: "8px",
+                    width: "8px",
+                    flexShrink: 0,
+                  }}
+                >
+                  <span
+                    className="animate-ping"
+                    style={{
+                      position: "absolute",
+                      display: "inline-flex",
+                      height: "100%",
+                      width: "100%",
+                      borderRadius: "9999px",
+                      backgroundColor: "#14b8a6",
+                      opacity: 0.75,
+                    }}
+                  />
+                  <span
+                    style={{
+                      position: "relative",
+                      display: "inline-flex",
+                      height: "8px",
+                      width: "8px",
+                      borderRadius: "9999px",
+                      backgroundColor: "#14b8a6",
+                    }}
+                  />
                 </span>
-                <span>Hello! I am glad you are here</span>
+                <span
+                  style={{
+                    fontSize: "13px",
+                    fontWeight: 500,
+                    color: "#14b8a6",
+                    letterSpacing: "0.02em",
+                    lineHeight: 1.4,
+                    whiteSpace: "nowrap",
+                  }}
+                >
+                  Hello! I am glad you are here
+                </span>
               </div>
             </FadeIn>
 
             {/* SplitText Headline */}
-            <div className="mb-8 sm:mb-12">
+            <div style={{ marginBottom: "34px" }}>
               <SplitTextReveal
-                text="Choose your experience"
+                text="Explore My Work"
                 as="h1"
                 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white"
                 delay={0.3}
@@ -54,24 +111,78 @@ export default function WelcomeExperience({
             </div>
 
             {/* Two Choices Cards */}
-            <div className="grid gap-4 sm:gap-6 md:grid-cols-2 text-left">
-              {/* Option 1: Explore Portfolio */}
-              <FadeIn delay={0.6} direction="up" distance={20}>
+            <div
+              className="grid gap-6 sm:gap-7 md:grid-cols-2 text-left"
+              onMouseLeave={() => setActiveCard(null)}
+            >
+              {/* Option 1: Browse Portfolio */}
+              <FadeIn delay={0.6} direction="up" distance={20} className="h-full flex flex-col">
                 <button
                   onClick={onSelectPortfolio}
-                  className="group relative flex h-full w-full flex-col items-center justify-center gap-4 sm:gap-6 rounded-2xl sm:rounded-3xl border border-white/10 bg-white/[0.03] p-6 sm:p-8 text-center transition-all duration-300 hover:border-[#14b8a6]/50 hover:bg-white/[0.06] hover:shadow-2xl hover:shadow-[#14b8a6]/10 cursor-pointer"
+                  onMouseEnter={() => setActiveCard("portfolio")}
+                  className={`group relative w-full rounded-3xl backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer ${isPortfolioActive
+                    ? "border border-[#14b8a6]/50 bg-[#0e121a]/95 shadow-2xl shadow-[#14b8a6]/20"
+                    : "border border-white/10 bg-[#0e121a]/80 hover:border-[#14b8a6]/30"
+                    }`}
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    padding: "44px 28px",
+                    minHeight: "290px",
+                    height: "100%",
+                    textAlign: "center",
+                  }}
                 >
-                  <div className="flex h-14 w-14 sm:h-16 sm:w-16 items-center justify-center rounded-2xl bg-[#14b8a6]/10 text-[#14b8a6] transition-transform duration-300 group-hover:scale-105">
-                    <svg className="h-7 w-7 sm:h-8 sm:w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                  {/* Icon Container */}
+                  <div
+                    style={{
+                      display: "flex",
+                      height: "64px",
+                      width: "64px",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      borderRadius: "18px",
+                      backgroundColor: isPortfolioActive ? "#14b8a6" : "rgba(20, 184, 166, 0.12)",
+                      color: isPortfolioActive ? "#0a0d14" : "#14b8a6",
+                      border: isPortfolioActive ? "1px solid #14b8a6" : "1px solid rgba(20, 184, 166, 0.25)",
+                      boxShadow: isPortfolioActive ? "0 0 35px rgba(20, 184, 166, 0.55)" : "none",
+                      marginBottom: "20px",
+                      transition: "all 0.3s ease",
+                      flexShrink: 0,
+                    }}
+                    className="group-hover:scale-105"
+                  >
+                    <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                     </svg>
                   </div>
 
+                  {/* Text Container */}
                   <div>
-                    <h3 className="text-lg sm:text-xl font-bold text-white mb-1.5 font-display">
-                      Explore Portfolio
+                    <h3
+                      style={{
+                        fontSize: "20px",
+                        fontWeight: 700,
+                        color: isPortfolioActive ? "#ffffff" : "rgba(255, 255, 255, 0.85)",
+                        marginBottom: "8px",
+                        transition: "color 0.3s ease",
+                      }}
+                      className="font-display"
+                    >
+                      Browse Portfolio
                     </h3>
-                    <p className="text-xs sm:text-sm text-white/70 leading-relaxed max-w-[260px] mx-auto">
+                    <p
+                      style={{
+                        fontSize: "13px",
+                        color: isPortfolioActive ? "rgba(255, 255, 255, 0.75)" : "rgba(255, 255, 255, 0.6)",
+                        lineHeight: 1.6,
+                        maxWidth: "260px",
+                        margin: "0 auto",
+                        transition: "color 0.3s ease",
+                      }}
+                    >
                       Take a guided tour through Mehboob&apos;s curated Flutter apps, technical stack, and architecture.
                     </p>
                   </div>
@@ -79,40 +190,87 @@ export default function WelcomeExperience({
               </FadeIn>
 
               {/* Option 2: AI Assistant */}
-              <FadeIn delay={0.75} direction="up" distance={20}>
+              <FadeIn delay={0.75} direction="up" distance={20} className="h-full flex flex-col">
                 <button
                   onClick={onSelectChat}
-                  className="group relative flex h-full w-full flex-col items-center justify-center gap-4 sm:gap-6 rounded-2xl sm:rounded-3xl border border-[#14b8a6]/30 bg-[#14b8a6]/5 p-6 sm:p-8 text-center transition-all duration-300 hover:border-[#14b8a6]/60 hover:bg-[#14b8a6]/10 hover:shadow-2xl hover:shadow-[#14b8a6]/20 cursor-pointer"
+                  onMouseEnter={() => setActiveCard("ai")}
+                  className={`group relative w-full rounded-3xl backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer ${isAIActive
+                    ? "border border-[#14b8a6]/50 bg-[#0e121a]/95 shadow-2xl shadow-[#14b8a6]/20"
+                    : "border border-white/10 bg-[#0e121a]/80 hover:border-[#14b8a6]/30"
+                    }`}
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    padding: "44px 28px",
+                    minHeight: "290px",
+                    height: "100%",
+                    textAlign: "center",
+                  }}
                 >
-                  <div className="flex h-14 w-14 sm:h-16 sm:w-16 items-center justify-center rounded-2xl bg-[#14b8a6] text-[#0a0d14] shadow-[0_0_25px_rgba(20,184,166,0.4)] transition-transform duration-300 group-hover:scale-105">
-                    <svg className="h-7 w-7 sm:h-8 sm:w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" />
+                  {/* Icon Container */}
+                  <div
+                    style={{
+                      display: "flex",
+                      height: "64px",
+                      width: "64px",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      borderRadius: "18px",
+                      backgroundColor: isAIActive ? "#14b8a6" : "rgba(20, 184, 166, 0.12)",
+                      color: isAIActive ? "#0a0d14" : "#14b8a6",
+                      border: isAIActive ? "1px solid #14b8a6" : "1px solid rgba(20, 184, 166, 0.25)",
+                      boxShadow: isAIActive ? "0 0 35px rgba(20, 184, 166, 0.55)" : "none",
+                      marginBottom: "20px",
+                      transition: "all 0.3s ease",
+                      flexShrink: 0,
+                    }}
+                    className="group-hover:scale-105"
+                  >
+                    <svg
+                      style={{ width: "36px", height: "36px" }}
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth={2.2}
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" />
                     </svg>
                   </div>
 
+                  {/* Text Container */}
                   <div>
-                    <h3 className="text-lg sm:text-xl font-bold text-white mb-1.5 font-display">
+                    <h3
+                      style={{
+                        fontSize: "20px",
+                        fontWeight: 700,
+                        color: isAIActive ? "#ffffff" : "rgba(255, 255, 255, 0.85)",
+                        marginBottom: "8px",
+                        transition: "color 0.3s ease",
+                      }}
+                      className="font-display"
+                    >
                       AI Assistant
                     </h3>
-                    <p className="text-xs sm:text-sm text-white/70 leading-relaxed max-w-[260px] mx-auto">
+                    <p
+                      style={{
+                        fontSize: "13px",
+                        color: isAIActive ? "rgba(255, 255, 255, 0.75)" : "rgba(255, 255, 255, 0.6)",
+                        lineHeight: 1.6,
+                        maxWidth: "260px",
+                        margin: "0 auto",
+                        transition: "color 0.3s ease",
+                      }}
+                    >
                       Skip the reading and chat directly with Mehboob&apos;s intelligent portfolio assistant.
                     </p>
                   </div>
                 </button>
               </FadeIn>
             </div>
-
-            {/* Quick Skip Footer */}
-            <FadeIn delay={1} direction="up" distance={15}>
-              <div className="mt-8 flex justify-center pb-2">
-                <button
-                  onClick={onSelectPortfolio}
-                  className="rounded-full border border-white/10 bg-white/[0.02] px-5 py-2 text-xs font-mono tracking-widest text-white/50 uppercase transition-all hover:border-[#14b8a6]/40 hover:text-[#14b8a6] hover:bg-[#14b8a6]/5 cursor-pointer"
-                >
-                  Direct Entry →
-                </button>
-              </div>
-            </FadeIn>
           </div>
         </motion.div>
       )}
